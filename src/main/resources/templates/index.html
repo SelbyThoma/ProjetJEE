@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Chambres</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+<body>
+<div align="center">
+    <h1>
+        Liste des Chambres
+    </h1>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Type</th>
+            <th>Adress</th>
+            <th>Région</th>
+            <th>Ville</th>
+            <th>Prix</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="chambre :${listChambre}">
+            <td th:text="${chambre.type}"></td>
+            <td th:text="${chambre.adresse}"></td>
+            <td th:text="${chambre.region}"></td>
+            <td th:text="${chambre.ville}"></td>
+            <td th:text="${chambre.prix}"></td>
+
+
+
+        </tr>
+
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>
